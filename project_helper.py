@@ -201,7 +201,7 @@ def plot_signal_histograms(signal_list, title, subplot_titles):
     config = helper.generate_config()
     colors = Color(helper.color_scheme['low_value']).range_to(Color(helper.color_scheme['high_value']), len(signal_series_list))
 
-    fig = py.tools.make_subplots(rows=1, cols=len(signal_series_list), subplot_titles=subplot_titles, print_grid=False)
+    fig = py.subplots.make_subplots(rows=1, cols=len(signal_series_list), subplot_titles=subplot_titles, print_grid=False)
     fig['layout'].update(title=title, showlegend=False)
 
     for series_i, (signal_series, color) in enumerate(zip(signal_series_list, colors), 1):
@@ -223,7 +223,7 @@ def plot_signal_to_normal_histograms(signal_list, title, subplot_titles):
     y_range = [0, 1500]
     config = helper.generate_config()
 
-    fig = py.tools.make_subplots(rows=1, cols=len(signal_series_list), subplot_titles=subplot_titles, print_grid=False)
+    fig = py.subplots.make_subplots(rows=1, cols=len(signal_series_list), subplot_titles=subplot_titles, print_grid=False)
     fig['layout'].update(title=title)
 
     for series_i, signal_series in enumerate(signal_series_list, 1):
