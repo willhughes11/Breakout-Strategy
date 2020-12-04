@@ -254,7 +254,7 @@ def test_calculate_kstest(fn):
         (
             'p_values',
             pd.Series(
-                [0.01650327, 0.67234149, 0.46161172],
+                [0.69536353, 0.46493498, 0.01650327],
                 tickers))])
 
     assert_output(fn, fn_inputs, fn_correct_outputs)
